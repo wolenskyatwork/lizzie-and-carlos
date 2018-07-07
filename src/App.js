@@ -5,7 +5,7 @@ import Invite from './invite'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className={"App"}>
         <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" />
         <Invite />
       </div>

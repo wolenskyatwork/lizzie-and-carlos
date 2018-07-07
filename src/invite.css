@@ -1,6 +1,6 @@
 .invite {
-    width: 600px;
-    height: 900px;
+    width: 700px;
+    height: 80vh;
     background-color: burlywood;
     border: black solid 1px;
     display: flex;
@@ -9,6 +9,16 @@
     justify-content: center;
     font-family: 'Vollkorn', serif;
     font-size: 22px;
+    background-image: url('./images/background-image.jpg');
+}
+
+.name {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.date {
+    font-size: 40px;
 }
 
 .italic {
@@ -17,4 +27,14 @@
 
 .bold {
     font-weight: bold;
+}
+
+.line-break {
+    border: black solid 1px;
+    width: 400px;
+    margin: 20px;
+}
+
+.and {
+    padding-right: 10px;
 }
