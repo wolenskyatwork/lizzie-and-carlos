@@ -1,9 +1,8 @@
 .App {
     text-align: center;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     background-image: url('./images/purple.jpg');
     align-items: center;
+    font-size: 0;
 }

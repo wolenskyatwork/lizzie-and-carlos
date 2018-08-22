@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import Invite from './invite'
+import LandingPage from './Pages/LandingPage'
 
 class App extends Component {
   render() {
     return (
       <div className={"App"}>
         <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" />
-        <Invite />
+        <link href="https://fonts.googleapis.com/css?family=Zeyada" rel="stylesheet" />
+        <LandingPage />
       </div>
     );
   }

@@ -1,0 +1,30 @@
+
+.navigator {
+    font-size: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    position: fixed;
+}
+
+.chicken_selector {
+    width: 100px;
+    height: 100px;
+}
+
+.navigator_choice {
+    display: flex;
+    height: 100px;
+    width: 200px;
+    justify-content: center;
+}
+
+.navigator_title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.absolute {
+    position: absolute;
+}

@@ -1,0 +1,33 @@
+.landing_page {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    color: white;
+    font-family: 'Vollkorn', serif;
+}
+
+.header {
+    font-family: 'Zeyada', cursive;
+    font-size: 80px;
+}
+
+.final_countdown {
+    font-size: 20px;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.background_image {
+    width: 100%;
+}
+
+.navigator_wrapper {
+}
+
+.font {
+    font-size: 50px;
+}
+
