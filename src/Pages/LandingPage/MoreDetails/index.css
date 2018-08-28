@@ -1,0 +1,8 @@
+.glasbern_map {
+    width: 500px;
+    height: 500px;
+}
+
+.glasbern_container {
+    display: flex;
+}

@@ -3,7 +3,7 @@
     font-size: 30px;
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     position: fixed;
 }
 
@@ -12,10 +12,15 @@
     height: 100px;
 }
 
+.cow_selector {
+    width: 130px;
+    height: 100px;
+}
+
 .navigator_choice {
     display: flex;
     height: 100px;
-    width: 200px;
+    padding: 0 20px;
     justify-content: center;
 }
 
@@ -23,7 +28,14 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    text-decoration: none;
+    color: white;
 }
+
+.navigator_title:visited { text-decoration: none; color:white; }
+.navigator_title:hover { text-decoration: none; color:white; }
+.navigator_title:focus { text-decoration: none; color:white; }
+.navigator_title:hover, .navigator_title:active { text-decoration: none; color:white; }
 
 .absolute {
     position: absolute;

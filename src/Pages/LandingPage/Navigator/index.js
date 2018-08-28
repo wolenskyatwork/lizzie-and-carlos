@@ -3,11 +3,11 @@ import './index.css';
 
 class Navigator extends Component {
 
-    navigatorChoice = (title) => {
+    navigatorChoice = (title, anchor) => {
         return (
             <div className='navigator_choice'>
-                <div className='navigator_title'>{title}</div>
-                <img className='chicken_selector absolute' src={require('../../../images/line-drawing-chicken-31.png')}/>
+                <a className='navigator_title' href={anchor}>{title}</a>
+                {/* <img className='chicken_selector absolute' src={require('../../../images/line-drawing-chicken-31.png')}/> */}
             </div>
         )
     }
@@ -15,10 +15,10 @@ class Navigator extends Component {
     render() {
         return (
             <div className='navigator'>
-                {this.navigatorChoice('Our Story')}
-                {this.navigatorChoice('More Details')}
-                {this.navigatorChoice('RSVP')}
-                {this.navigatorChoice('Registry')}
+                { /* this.navigatorChoice('Our Story', '#our_story') */ }
+                {this.navigatorChoice('More Details', '#more_details')}
+                {this.navigatorChoice('RSVP', '#rsvp_here')}
+                {this.navigatorChoice('Registry', 'https://www.zola.com/registry/wolenskygadeawedding')}
             </div>
         );
     }

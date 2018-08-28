@@ -2,7 +2,7 @@
     text-align: center;
     display: flex;
     justify-content: center;
-    background-image: url('./images/purple.jpg');
+    background-color: white;
     align-items: center;
     font-size: 0;
 }

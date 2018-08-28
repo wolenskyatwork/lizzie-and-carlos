@@ -3,7 +3,7 @@
     height: 100%;
     width: 100%;
     flex-direction: column;
-    color: white;
+    color: black;
     font-family: 'Vollkorn', serif;
 }
 
@@ -22,6 +22,7 @@
 
 .background_image {
     width: 100%;
+    height: 100vh;
 }
 
 .navigator_wrapper {
