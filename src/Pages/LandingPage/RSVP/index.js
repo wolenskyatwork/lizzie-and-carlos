@@ -82,7 +82,7 @@ class RSVP extends Component {
     }
 
     notAttending = () => {
-        return <div>You suck</div>
+        return <div>Sorry you can't make it. You will be missed! :)</div>
     }
 
     sendRSVP = () => {
