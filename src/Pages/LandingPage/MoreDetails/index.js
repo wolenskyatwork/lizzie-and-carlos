@@ -30,14 +30,15 @@ class MoreDetails extends Component {
                         <div className={'glasbern_container'}>
                             <iframe
                                 className={'glasbern_map'}
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4350.783741757354!2d-75.54508334505333!3d40.57158961950408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8139e3622ef0ac23!2sWingate+by+Wyndham+Allentown!5e1!3m2!1sen!2sus!4v1535327512470"
-                                allowFullScreen></iframe>
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d446.7195539521871!2d-75.62775604941864!3d40.58244575730948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c433d3fc3b9963%3A0xa618477b64f6a79e!2sHawthorn+Suites+by+Wyndham+Allentown-Fogelsville!5e0!3m2!1sen!2sus!4v1536449020598"
+                                allowFullScreen
+                            ></iframe>
                             <div>
-                                <div>Wyndham by Wingate</div>
                                 <div>
-                                    <div>4325 Hamilton Blvd</div>
-                                    <div>Allentown, PA 18103</div>
-                                    <div>(610) 366-1600</div>
+                                    <div>Hawthorn Suites</div>
+                                    <div>7720 Main Street</div>
+                                    <div>Fogelsville, PA 18051</div>
+                                    <div>(610) 366-9422</div>
                                     <div>Ask for the Wolensky-Gadea wedding room block</div>
                                 </div>
                             </div>
