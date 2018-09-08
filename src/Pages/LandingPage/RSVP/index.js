@@ -100,19 +100,12 @@ class RSVP extends Component {
         //     finished: true,
         // })
 
-        // var myHeaders = new Headers();
-        //
-        // myHeaders.append('Content-Type', 'text/xml');
-        // myHeaders.get('Content-Type') // should return 'text/xml'
-
-        const myHeaders = new Headers({
-            'Content-Type': 'application/json',
-        })
-
-        fetch('https://lizzieandcarlos.com/rsvps', {
+        fetch('rsvps', {
             method: 'POST',
-            // mode: 'no-cors',
-            headers: myHeaders,
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
             body: JSON.stringify({ "rsvp": {
                 first_name: this.state.first_name,
                 last_name: this.state.last_name,
