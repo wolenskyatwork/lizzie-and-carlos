@@ -1,5 +1,6 @@
 .landing_page {
     align-items: center;
+    background-color: #8d859a;
     color: black;
     display: flex;
     flex-direction: column;
@@ -31,9 +32,11 @@
 .font {
     background-color: #d1cfe7;
     border-radius: 8px;
+    color: #54586f;
     font-family: Vollkorn;
     font-size: 50px;
-    margin: 0 0 32px 0;
+    margin: 32px;
+    max-width: 760px;
     padding: 32px;
 }
 

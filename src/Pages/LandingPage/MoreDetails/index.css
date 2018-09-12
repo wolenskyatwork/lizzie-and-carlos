@@ -6,6 +6,7 @@
 .glasbern-container {
     display: flex;
     margin: 0 0 32px;
+    text-align: left;
 }
 
 .glasbern-container iframe,
@@ -13,11 +14,15 @@
     flex: 1;
 }
 
+.glasbern-container > div {
+  padding: 0 16px 0;
+}
+
 .details-container {
     font-size: 32px;
 }
 
-#more_details {
+.details-header {
     margin: 0 0 16px 0;
 }
 
@@ -25,6 +30,22 @@
     font-weight: 700;
 }
 
+.title.main {
+    margin: 0 0 8px 0;
+}
+
 .directions {
     font-size: 24px;
+    text-align: left;
+}
+
+.icon-credit {
+    color: #555;
+    font-size: 12px;
+    margin-top: 32px;
+}
+
+.icon-credit a {
+    color: #4b4489;
+    text-decoration: none;
 }

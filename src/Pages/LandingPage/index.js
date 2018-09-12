@@ -60,11 +60,13 @@ class LandingPage extends Component {
                     <img alt='Romantic' className='background_image' src={require('../../images/romantic_pic.jpg')} />
                 </div>
 
+                <div id='rsvp_here'></div>
                 <RSVP />
 
-                <div className={'font'}>Come back soon for an updated day-of timeline!</div>
-
+                <div id='more_details'></div>
                 <MoreDetails />
+
+                <div className={'font'}>Come back soon for an updated day-of timeline!</div>
             </div>
         );
     }

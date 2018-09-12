@@ -158,7 +158,7 @@ class RSVP extends Component {
         } = this.state;
 
         return (
-            <div id='rsvp_here' className='RSVP'>
+            <div className='RSVP'>
                 <div className={'rsvp_left'}></div>
                 <div className={'rsvp_right'}>
                     { !this.state.finished && (
@@ -208,10 +208,10 @@ class RSVP extends Component {
                             </div>
                             { this.state.attending ? this.attending() : this.notAttending() }
                             <div className={'rsvp-row'}>
-                                <div className={'input-container button-container'}>
+                                <div className={'button-container'}>
                                     { show_required_warning && (
                                         <div className={'warning'}>
-                                            Please enter your first and last name
+                                            Please enter your first and last name.
                                         </div>
                                     )}
                                     { show_error_message && (
