@@ -8,12 +8,14 @@ class RSVP extends Component {
     constructor() {
         super()
         this.state = {
+            show_error_message: false,
+            show_required_warning: false,
             finished: false,
             first_name: '',
             last_name: '',
             attending: true,
             selected_food_option_id: 1,
-            diet_stuff: '',
+            dietary_note: '',
             food_options: [
                 { id: 1, name: 'Chicken', imgSrc: require('../../../images/chicken.png') },
                 { id: 2, name: 'Steak', imgSrc: require('../../../images/cow.png') },
@@ -22,11 +24,18 @@ class RSVP extends Component {
         };
     }
 
+
+    resetWarning = () => {
+        this.setState({
+            show_required_warning: false,
+        });
+    }
+
     handleInputChange = (event) => {
         const target = event.target;
 
         this.setState({
-            [target.name]: target.value.substring(0, 239)
+            [target.name]: target.value.substring(0, 239),
         });
     }
 
@@ -38,7 +47,7 @@ class RSVP extends Component {
 
     attending = () => {
         const {
-          diet_stuff,
+          dietary_note,
           food_options,
           selected_food_option_id,
         } = this.state
@@ -68,11 +77,11 @@ class RSVP extends Component {
                         </div>
                         <div className={'textarea-wrapper'}>
                             <textarea
-                                value={diet_stuff}
+                                value={dietary_note}
                                 className={'rsvp-notes'}
                                 onChange={this.handleInputChange}
                                 type='text'
-                                name='diet_stuff'
+                                name='dietary_note'
                             >
                             </textarea>
                         </div>
@@ -94,6 +103,22 @@ class RSVP extends Component {
     }
 
     sendRSVP = () => {
+				const {
+            attending,
+            first_name,
+            last_name,
+            selected_food_option_id,
+            dietary_note,
+				} = this.state;
+
+				if (first_name.length === 0 || last_name.length === 0) {
+            this.setState({
+                show_error_message: false,
+                show_required_warning: true,
+            });
+            return;
+				}
+
         fetch('rsvps', {
             method: 'POST',
             headers: {
@@ -101,13 +126,18 @@ class RSVP extends Component {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({ "rsvp": {
-                first_name: this.state.first_name,
-                last_name: this.state.last_name,
-                food_option_id: this.state.selected_food_option_id,
-                attending: this.state.attending,
-                dietary_note: this.state.diet_stuff,
+                first_name: first_name,
+                last_name: last_name,
+                food_option_id: selected_food_option_id,
+                attending: attending,
+                dietary_note: dietary_note,
             }})
-        }).then(this.setState({ finished: true }))
+        }).then(this.setState({ finished: true })).catch(this.setState({
+            finished: false,
+            show_error_message: true,
+            show_required_warning: false,
+        }));
+          
     }
 
     selectOption(id) {
@@ -123,6 +153,8 @@ class RSVP extends Component {
             food_options,
             last_name,
             selected_food_option_id,
+            show_error_message,
+            show_required_warning,
         } = this.state;
 
         return (
@@ -138,6 +170,7 @@ class RSVP extends Component {
                                 <div className={'input-container'}>
                                   <div className={'input-label'}>First Name</div>
                                   <input
+                                      onFocus={this.resetWarning}
                                       onChange={this.handleInputChange}
                                       type='text'
                                       name='first_name'
@@ -147,6 +180,7 @@ class RSVP extends Component {
                                 <div className={'input-container'}>
                                   <div className={'input-label'}>Last Name</div>
                                   <input
+                                      onFocus={this.resetWarning}
                                       onChange={this.handleInputChange}
                                       type='text'
                                       name='last_name'
@@ -175,6 +209,16 @@ class RSVP extends Component {
                             { this.state.attending ? this.attending() : this.notAttending() }
                             <div className={'rsvp-row'}>
                                 <div className={'input-container button-container'}>
+                                    { show_required_warning && (
+                                        <div className={'warning'}>
+                                            Please enter your first and last name
+                                        </div>
+                                    )}
+                                    { show_error_message && (
+                                        <div className={'warning'}>
+                                            Something went wrong, please try again later!
+                                        </div>
+                                    )}
                                     <div
                                         className={'rsvp-button'}
                                         onClick={this.sendRSVP}
