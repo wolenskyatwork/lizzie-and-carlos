@@ -97,6 +97,8 @@ input:focus,
 }
 
 .rsvp-button {
+		cursor: pointer;
+		font-family: 'Source Sans Pro';
 		height: 48px;
     background-color: #cea09c;
     border-radius: 25px;
