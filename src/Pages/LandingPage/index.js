@@ -65,7 +65,6 @@ class LandingPage extends Component {
                 <div className={'font'}>Come back soon for an updated day-of timeline!</div>
 
                 <MoreDetails />
-
             </div>
         );
     }

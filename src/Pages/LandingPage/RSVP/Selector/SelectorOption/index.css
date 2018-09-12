@@ -1,0 +1,16 @@
+.selector-option {
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.selector-option-icon {
+    margin: 0 8px 0 0;
+    height: 22px;
+}
+
+.selected {
+    background-color: #e7d1cf;
+}

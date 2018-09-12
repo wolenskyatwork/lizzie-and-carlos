@@ -3,6 +3,28 @@
     height: 500px;
 }
 
-.glasbern_container {
+.glasbern-container {
     display: flex;
+    margin: 0 0 32px;
+}
+
+.glasbern-container iframe,
+.glasbern-container div {
+    flex: 1;
+}
+
+.details-container {
+    font-size: 32px;
+}
+
+#more_details {
+    margin: 0 0 16px 0;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.directions {
+    font-size: 24px;
 }

@@ -1,12 +1,133 @@
-.RSVP {
-    font-size: 20px;
-    color: black;
+.rsvp-sorry-icon {
+    display: inline;
+    height: 32px;
+    margin: 0 0 4px 8px;
+}
+
+input {
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 0px 12px #e7d1cf;
+    box-sizing: border-box;
+    color: #9597a5;
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 16px;
+    width: 100%;
+}
+
+.textarea-wrapper {
     background-color: white;
-    border-color: black;
-    border-width: 5px;
-    border-style: solid;
-    margin: 0 100px;
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.rsvp-notes {
+    border: none;
+    color: #9597a5;
+    font-size: 16px;
+    height: 96px;
+    padding: 0;
+    width: 100%;
+}
+
+input:focus,
+.rsvp-notes:focus {
+    outline: none; 
+}
+
+.input-label {
+    margin: 0 0 12px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.rsvp-form-wrapper {
+    padding: 32px;
+}
+
+.rsvp-row {
+    display: grid;
+    grid-template-columns: 600px;
+    margin: 0;
+    padding: 0;
+}
+
+.rsvp-header {
+    color: #54586f;
+    display: inline-block;
+    font-family: Vollkorn;
+    font-size: 32px;
+    font-weight: 700;
+    max-width: 600px;
+    padding: 16px;
+    text-align: justify;
+}
+
+.rsvp-row .input-container.rsvp-sorry {
+    align-items: center;
+    color: #54586f;
+    flex-direction: row;
+    font-family: Vollkorn;
+    font-size: 24px;
+    font-weight: 700;
+    height: 38px;
+    justify-content: center;
+    line-height: 38px;
+}
+
+.rsvp-row .input-container {
+    align-items: stretch;
     display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.rsvp-row--double {
+    grid-template-columns: 300px 300px;
+}
+
+.rsvp-row--triple {
+    grid-template-columns: 200px 200px 200px;
+}
+
+.rsvp-row--quad {
+    grid-template-columns: 150px 150px 150px 150px;
+}
+
+.rsvp-button {
+		height: 48px;
+    background-color: #cea09c;
+    border-radius: 25px;
+    color: white;
+    font-size: 20px;
+    line-height: 48px;
+    text-align: center;
+    width: 120px;
+}
+
+.rsvp-thanks {
+    align-items: center;
+    display: flex;
+    font-size: 32px;
+    height: 300px;
+    justify-content: center;
+    width: 600px;
+}
+
+.input-container.button-container {
+  align-items: flex-end;
+}
+
+.RSVP {
+    background-color: #f5eceb;
+    border-radius: 16px;
+    color: #9597a5;
+    display: flex;
+    font-size: 16px;
+    font-family: 'Maven Pro', sans-serif;
+    margin: 40px 48px;
 }
 
 .food_box,
@@ -34,16 +155,9 @@
 }
 
 .rsvp_left {
-    width: 40%;
     background-color: darkslategrey;
-}
-
-.rsvp_right {
-    width: 60%;
-}
-
-.lazy_spacing {
-    padding: 10px;
+    border-radius: 16px 0 0 16px;
+    width: 40%;
 }
 
 label {
@@ -65,21 +179,9 @@ label {
     height: 500px;
 }
 
-.input_box {
-    background-color: transparent;
-    border: 0px solid;
-    border-bottom: 1px solid;
-    font-size: 20px;
-}
-
-.diet_input {
-    width: 99%;
-    height: 100px;
-}
-
 .circle_selector {
-    height: 150px;
-    width: 150px;
+    height: 12px;
+    width: 12px;
     position: absolute;
     padding-bottom: 65px;
 }
@@ -90,10 +192,11 @@ label {
 
 .name_box {
     display: flex;
+    flex: 1;
+    margin: 0 0 18px 0;
 }
 
 .name_box_input {
-    width: 80%;
 }
 
 .rsvp_button {
