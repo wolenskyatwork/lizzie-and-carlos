@@ -23,8 +23,6 @@ class MoreDetails extends Component {
                         <iframe
                             className={'glasbern_map'}
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.6636552848368!2d-75.66010504919119!3d40.59317905271201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c433a564cbc165%3A0xcf9fec6f1c80f5f2!2sGLASBERN+-+Official+Site+-+GUARANTEED+BEST+Rates+Here!5e0!3m2!1sen!2sus!4v1536723394486"
-                            allowfullscreen
-                            frameborder="0"
                             style={{"border": "0"}}
                         >
                         </iframe>
@@ -42,8 +40,6 @@ class MoreDetails extends Component {
                         <iframe
                             className={'glasbern_map'}
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d446.7195539521871!2d-75.62775604941864!3d40.58244575730948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c433d3fc3b9963%3A0xa618477b64f6a79e!2sHawthorn+Suites+by+Wyndham+Allentown-Fogelsville!5e0!3m2!1sen!2sus!4v1536449020598"
-                            allowFullScreen
-                            frameborder="0"
                             style={{"border": "0"}}
                         ></iframe>
                     </div>

@@ -102,6 +102,11 @@ class RSVP extends Component {
         </div>
     }
 
+    nameIsValid(nameStr) {
+        const empty = nameStr.replace(/\s/g,'').length === 0;
+        return !empty && nameStr.match(/^[a-zA-Z\s'.-]+$/g);
+    }
+
     sendRSVP = () => {
 				const {
             attending,
@@ -111,7 +116,13 @@ class RSVP extends Component {
             dietary_note,
 				} = this.state;
 
-				if (first_name.length === 0 || last_name.length === 0) {
+        this.setState({
+            first_name: first_name.trim(),
+            last_name: last_name.trim(),
+            dietary_note: dietary_note.trim(),
+        });
+
+				if (!this.nameIsValid(first_name) || !this.nameIsValid(last_name)) {
             this.setState({
                 show_error_message: false,
                 show_required_warning: true,
@@ -211,7 +222,7 @@ class RSVP extends Component {
                                 <div className={'button-container'}>
                                     { show_required_warning && (
                                         <div className={'warning'}>
-                                            Please enter your first and last name.
+                                            Please enter a valid first and last name.
                                         </div>
                                     )}
                                     { show_error_message && (
