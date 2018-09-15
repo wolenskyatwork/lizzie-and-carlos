@@ -143,11 +143,29 @@ class RSVP extends Component {
                 attending: attending,
                 dietary_note: dietary_note,
             }})
-        }).then(this.setState({ finished: true })).catch(this.setState({
+        }).then((response) => {
+
+          if (!response.ok) {
+            throw Error(response.statusText);
+          }
+
+        }).then((response) => {
+
+          console.log('Success:', JSON.stringify(response))
+
+          this.setState({ finished: true })
+
+        }).catch((error) => {
+
+          console.error('Error:', error)
+
+          this.setState({
             finished: false,
             show_error_message: true,
             show_required_warning: false,
-        }));
+          })
+
+        });
           
     }
 
